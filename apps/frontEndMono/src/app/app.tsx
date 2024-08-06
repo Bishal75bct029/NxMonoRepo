@@ -1,12 +1,9 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
-
-import NxWelcome from './nx-welcome';
-
+import { API_ROUTES } from '@monorepo/shared';
 export function App() {
   return (
     <div>
-      <NxWelcome title="frontEndMono" />
+      <h1>Hello</h1>
+      {API_ROUTES.book}
     </div>
   );
 }
