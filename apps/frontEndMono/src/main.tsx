@@ -1,16 +1,14 @@
-import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { API_ROUTES } from '@monorepo/shared';
 
 import App from './app/app';
-
-console.log(API_ROUTES);
+import { Provider } from 'react-redux';
+import store from './rtk/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <StrictMode>
+  <Provider store={store}>
     <App />
-  </StrictMode>
+  </Provider>
 );
